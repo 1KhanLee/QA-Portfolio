@@ -21,10 +21,10 @@
 Статус 201 Created. В ответе вернулся объект:
 ```json
 {
-  "title": "Test post",
-  "body": "This is a test post created via Postman",
-  "userId": 1,
-  "id": 101
+    "title": "test title",
+    "body": "test body",
+    "userId": 1,
+    "id": 101
 }
 ```
 
