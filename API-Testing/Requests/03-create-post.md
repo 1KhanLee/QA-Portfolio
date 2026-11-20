@@ -19,7 +19,7 @@
 
 **Фактический результат:**
 Статус 201 Created. В ответе вернулся объект:
-```
+```json
 {
   "title": "Test post",
   "body": "This is a test post created via Postman",
