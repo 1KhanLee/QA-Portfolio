@@ -13,23 +13,24 @@
 
 ### Запросы
 
+Каждый запрос описан в отдельном файле: метод, URL, заголовки, тело, ожидаемый результат, фактический результат и скриншот.
+
 | Запрос | Метод и URL | Ожидаемый результат |
 |---|---|---|
-| Get all posts | `GET /posts` | статус 200, в ответе список постов |
-| Get post by ID | `GET /posts/1` | статус 200, пост с `id` = 1 |
-| Create post | `POST /posts` | статус 201, в ответе есть `id` нового поста |
-| Update post | `PUT /posts/1` | статус 200, `title` изменён |
-| Partially update post | `PATCH /posts/1` | статус 200, `title` изменён |
-| Delete post | `DELETE /posts/1` | статус 200, пустой объект `{}` |
-| Get non-existent post (негативный) | `GET /posts/9999` | статус 404, пустой объект `{}` |
-
-Для каждого запроса сравниваю фактический статус-код и тело ответа с ожидаемыми.
+| [GET - Get all posts](Requests/01-get-all-posts.md) | `GET /posts` | Статус 200 |
+| [GET - Get post by ID](Requests/02-get-post-by-id.md) | `GET /posts/1` | Статус 200 |
+| [POST - Create post](Requests/03-create-post.md) | `POST /posts` | Статус 201 |
+| [PUT - Update post](Requests/04-update-post.md) | `PUT /posts/1` | Статус 200 |
+| [PATCH - Partially update post](Requests/05-patch-post.md) | `PATCH /posts/1` | Статус 200 |
+| [DELETE - Delete post](Requests/06-delete-post.md) | `DELETE /posts/1` | Статус 200 |
+| [GET - Get non-existent post (негативный)](Requests/07-get-nonexistent-post.md) | `GET /posts/9999` | Статус 404 |
 
 ## Структура папки
 
 ```
 API-Testing/
 ├── README.md
+├── Requests/       # описание каждого запроса отдельным файлом
 ├── postman/        # экспорт Postman-коллекции (.json)
 └── screenshots/    # скриншоты запросов и прогона коллекции
 ```
