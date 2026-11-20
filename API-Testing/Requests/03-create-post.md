@@ -4,8 +4,6 @@
 
 **URL:** `https://jsonplaceholder.typicode.com/posts`
 
-**Заголовки:** `Content-Type: application/json`
-
 **Тело запроса (Body → raw → JSON):**
 
 ```json
@@ -20,11 +18,14 @@
 Статус 201. В ответе данные отправленного поста и новый `id`.
 
 **Фактический результат:**
-_Будет добавлен после выполнения запроса._
+Статус 201 Created. В ответе вернулся объект:
+{
+  "title": "Test post",
+  "body": "This is a test post created via Postman",
+  "userId": 1,
+  "id": 101
+}
 
-**Скриншот:**
-_Будет добавлен после выполнения запроса._
-
-**Статус:** не выполнен
+**Статус:** Выполнен
 
 [← Назад к API Testing](../README.md)
