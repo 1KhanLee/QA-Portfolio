@@ -1,24 +1,12 @@
 {
   "info": {
-    "name": "JSONPlaceholder API Tests",
-    "description": "Простые тесты для https://jsonplaceholder.typicode.com: GET, POST, PUT, PATCH, DELETE и негативный сценарий.",
+    "name": "JSONPlaceholder API Requests",
+    "description": "Запросы к https://jsonplaceholder.typicode.com: GET, POST, PUT, PATCH, DELETE и негативный сценарий.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
       "name": "GET - Get all posts",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 200\", () => pm.response.to.have.status(200));",
-              "pm.test(\"Ответ — список\", () => pm.expect(pm.response.json()).to.be.an(\"array\"));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "GET",
         "header": [],
@@ -35,18 +23,6 @@
     },
     {
       "name": "GET - Get post by ID",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 200\", () => pm.response.to.have.status(200));",
-              "pm.test(\"id равен 1\", () => pm.expect(pm.response.json().id).to.eql(1));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "GET",
         "header": [],
@@ -64,18 +40,6 @@
     },
     {
       "name": "POST - Create post",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 201\", () => pm.response.to.have.status(201));",
-              "pm.test(\"В ответе есть id\", () => pm.expect(pm.response.json()).to.have.property(\"id\"));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "POST",
         "header": [
@@ -106,18 +70,6 @@
     },
     {
       "name": "PUT - Update post",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 200\", () => pm.response.to.have.status(200));",
-              "pm.test(\"title обновился\", () => pm.expect(pm.response.json().title).to.eql(\"updated title\"));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "PUT",
         "header": [
@@ -149,18 +101,6 @@
     },
     {
       "name": "PATCH - Partially update post",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 200\", () => pm.response.to.have.status(200));",
-              "pm.test(\"title обновился\", () => pm.expect(pm.response.json().title).to.eql(\"patched title\"));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "PATCH",
         "header": [
@@ -192,17 +132,6 @@
     },
     {
       "name": "DELETE - Delete post",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 200\", () => pm.response.to.have.status(200));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "DELETE",
         "header": [],
@@ -220,17 +149,6 @@
     },
     {
       "name": "GET - Get non-existent post (negative)",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Статус 404\", () => pm.response.to.have.status(404));"
-            ]
-          }
-        }
-      ],
       "request": {
         "method": "GET",
         "header": [],
