@@ -130,3 +130,44 @@
 **Severity:** High
 
 **Priority:** High
+
+
+---
+
+# Bug Reports: Скидки на AVRANG.TJ
+
+**Project:** Сайт avrang.tj  
+**Type:** Manual Testing  
+**Author:** Ulugbek Zinatov
+
+---
+
+## BUG-005: Некорректное отображение скидки на карточке товара
+
+**Environment:**
+- OS: Windows 11
+- Browser: Google Chrome 157
+- Test Type: Manual Testing
+
+**Preconditions:**
+- Открыта главная страница сайта https://avrang.tj/.
+
+**Steps to Reproduce:**
+1. На главной странице выбрать «Каталог».
+2. Зайти в раздел «Техника для дома» → «Кондиционеры».
+3. Найти кондиционер Haier HSU-09HTM303/R3.
+4. Посмотреть на карточку товара.
+
+**Expected Result:**
+Процент скидки соответствует разнице между старой и новой ценой и не превышает 100%.
+
+**Actual Result:**
+На карточке отображается скидка «-150%». Старая цена 3 150 TJS, текущая цена 3 059,96 TJS, то есть реальная скидка около 3%.
+
+**Screenshot:**
+
+![Скидка -150% на карточке товара](screenshots/bug-005-avrang-discount-150.jpg)
+
+**Severity:** Medium
+
+**Priority:** High
