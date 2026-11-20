@@ -32,7 +32,7 @@
 **Actual Result:**
 Система успешно регистрирует пользователя без Email.
 
-**Severity:** High
+**Severity:** Medium
 
 **Priority:** High
 
@@ -62,7 +62,7 @@
 
 **Severity:** Medium
 
-**Priority:** High
+**Priority:** Medium
 
 ---
 
@@ -87,9 +87,9 @@
 **Actual Result:**
 Пароль отображается обычным открытым текстом.
 
-**Severity:** High
+**Severity:** Medium
 
-**Priority:** High
+**Priority:** Medium
 
 
 ---
@@ -127,6 +127,6 @@
 **Actual Result:**
 Открывается страница с ошибкой: `DB query error. Please try later.`
 
-**Severity:** Medium
+**Severity:** High
 
 **Priority:** High
