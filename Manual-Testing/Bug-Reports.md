@@ -164,9 +164,17 @@
 **Actual Result:**
 На карточке отображается скидка «-150%». Старая цена 3 150 TJS, текущая цена 3 059,96 TJS, то есть реальная скидка около 3%.
 
-**Screenshot:**
+Ошибка воспроизводится и на другом товаре: Кондиционер TCL TAC-FR09INV/R3 — скидка «-150%», старая цена 5 700 TJS, текущая цена 5 536,77 TJS (реальная скидка около 3%).
 
-![Скидка -150% на карточке товара](screenshots/bug-005-avrang-discount-150.jpg)
+**Screenshots:**
+
+Haier HSU-09HTM303/R3:
+
+![Скидка -150% на карточке товара Haier](screenshots/bug-005-avrang-discount-150.jpg)
+
+TCL TAC-FR09INV/R3:
+
+![Скидка -150% на карточке товара TCL](screenshots/bug-005-avrang-discount-150-tcl.png)
 
 **Severity:** Medium
 
