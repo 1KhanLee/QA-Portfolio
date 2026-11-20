@@ -13,30 +13,23 @@
 
 ### Запросы и проверки
 
-| Запрос | Метод и URL | Ожидаемый код | Проверки |
-|---|---|---|---|
-| Get all posts | `GET /posts` | 200 | код ответа, Content-Type, время ответа, массив из 100 постов, поля `userId`, `id`, `title`, `body` |
-| Get post by ID | `GET /posts/1` | 200 | код ответа, Content-Type, время ответа, `id` равен 1, типы полей |
-| Create post | `POST /posts` | 201 | код ответа, Content-Type, время ответа, есть `id`, данные совпадают с отправленными |
-| Update post | `PUT /posts/1` | 200 | код ответа, время ответа, `id` равен 1, данные совпадают с отправленными |
-| Partially update post | `PATCH /posts/1` | 200 | код ответа, время ответа, `title` обновился, остальные поля на месте |
-| Delete post | `DELETE /posts/1` | 200 | код ответа, время ответа, тело — пустой объект |
-| Get non-existent post (негативный) | `GET /posts/9999` | 404 | код ответа, время ответа, тело — пустой объект |
+| Запрос | Метод и URL | Проверки |
+|---|---|---|
+| Get all posts | `GET /posts` | статус 200, ответ — список |
+| Get post by ID | `GET /posts/1` | статус 200, `id` равен 1 |
+| Create post | `POST /posts` | статус 201, в ответе есть `id` |
+| Update post | `PUT /posts/1` | статус 200, `title` обновился |
+| Partially update post | `PATCH /posts/1` | статус 200, `title` обновился |
+| Delete post | `DELETE /posts/1` | статус 200 |
+| Get non-existent post (негативный) | `GET /posts/9999` | статус 404 |
 
-Всего 7 запросов и 29 проверок.
+Всего 7 запросов и 12 проверок.
 
 ### Пример теста
 
 ```javascript
-pm.test("Код ответа 200", function () {
-    pm.response.to.have.status(200);
-});
-
-pm.test("Ответ — массив из 100 постов", function () {
-    const json = pm.response.json();
-    pm.expect(json).to.be.an("array");
-    pm.expect(json).to.have.lengthOf(100);
-});
+pm.test("Статус 200", () => pm.response.to.have.status(200));
+pm.test("id равен 1", () => pm.expect(pm.response.json().id).to.eql(1));
 ```
 
 ## Структура папки
