@@ -57,7 +57,7 @@
 
 ### Тестирование API (API Testing)
 
-- Практика тестирования API в Postman.
+- [Практика тестирования API в Postman](API-Testing/README.md)
 
 ## Профессиональные цели
 
