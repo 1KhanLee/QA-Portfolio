@@ -18,11 +18,16 @@
 Статус 200. В ответе пост с обновлённым `title`, остальные поля сохранены.
 
 **Фактический результат:**
-_Будет добавлен после выполнения запроса._
+Статус 200 OK. В ответе вернулся объект:
+```
+{
+    "userId": 1,
+    "id": 1,
+    "title": "patched title",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+```
 
-**Скриншот:**
-_Будет добавлен после выполнения запроса._
-
-**Статус:** не выполнен
+**Статус:** Выполнен
 
 [← Назад к API Testing](../README.md)
