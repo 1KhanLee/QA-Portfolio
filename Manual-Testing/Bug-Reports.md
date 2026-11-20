@@ -90,3 +90,43 @@
 **Severity:** High
 
 **Priority:** High
+
+
+---
+
+# Bug Reports: Регистрация на VOLNA.TJ
+
+**Project:** Сайт volna.tj  
+**Type:** Manual Testing  
+**Author:** Ulugbek Zinatov
+
+---
+
+## BUG-004: Ошибка при регистрации на сайте volna.tj
+
+**Environment:**
+- OS: Windows 11
+- Browser: Google Chrome 157
+- Test Type: Manual Testing
+
+**Preconditions:**
+- Открыта главная страница сайта https://volna.tj/.
+
+**Steps to Reproduce:**
+1. На главной странице нажать кнопку «Регистрация».
+2. Ввести в поле «Имя»: Муслим.
+3. Ввести в поле «Фамилия»: Алиев.
+4. Ввести в поле «Логин»: Aliev1900.
+5. Ввести в поле «Почта»: nttmmv4b@mail.ru.
+6. Ввести проверочный код.
+7. Нажать кнопку «Зарегистрироваться».
+
+**Expected Result:**
+Открывается страница личного кабинета с сообщением об успешной регистрации.
+
+**Actual Result:**
+Открывается страница с ошибкой: `DB query error. Please try later.`
+
+**Severity:** Medium
+
+**Priority:** High
