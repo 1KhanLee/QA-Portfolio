@@ -171,3 +171,123 @@
 **Severity:** Medium
 
 **Priority:** High
+
+
+---
+
+# Bug Reports: HR-портал hr.fnfglobalinc.com
+
+**Project:** Сайт hr.fnfglobalinc.com  
+**Type:** Manual Testing  
+**Author:** Ulugbek Zinatov
+
+---
+
+## BUG-006: В заявке кандидата поле «Имя» принимает цифры
+
+**Environment:**
+- OS: Windows 11
+- Browser: Google Chrome 157
+- Test Type: Manual Testing
+
+**Preconditions:**
+- Открыта страница сайта https://hr.fnfglobalinc.com/apply.
+
+**Steps to Reproduce:**
+1. Нажать на кнопку «Заполнить анкету кандидата».
+2. В поле «Имя» ввести цифры, например `111111`.
+3. Заполнить остальные поля.
+4. Нажать кнопку «Далее».
+
+**Expected Result:**
+При вводе цифр в поле «Имя» должна появиться ошибка.
+
+**Actual Result:**
+Поле «Имя» принимает цифры.
+
+**Severity:** High
+
+**Priority:** Medium
+
+---
+
+## BUG-007: Письмо для восстановления пароля отправляется на несуществующую почту
+
+**Environment:**
+- OS: Windows 11
+- Browser: Google Chrome 157
+- Test Type: Manual Testing
+
+**Preconditions:**
+- Открыта страница сайта https://hr.fnfglobalinc.com/apply.
+
+**Steps to Reproduce:**
+1. Нажать на кнопку «Забыли пароль».
+2. В поле «Email» ввести почту `z5rxihd4@mail.ru`.
+3. Нажать кнопку «Отправить».
+
+**Expected Result:**
+Должна появиться ошибка с текстом «Такого аккаунта не существует».
+
+**Actual Result:**
+Появляется окно с текстом «Запрос принят».
+
+**Severity:** Medium
+
+**Priority:** Medium
+
+---
+
+## BUG-008: В личном кабинете поле «Телефон» принимает и сохраняет буквы
+
+**Environment:**
+- OS: Windows 11
+- Browser: Google Chrome 157
+- Test Type: Manual Testing
+
+**Preconditions:**
+- Открыта страница сайта https://hr.fnfglobalinc.com/apply.
+
+**Steps to Reproduce:**
+1. Перейти во вкладку «Мой профиль».
+2. Нажать на кнопку «Изменить данные».
+3. Ввести в поле «Телефон» буквы.
+4. Нажать кнопку «Сохранить».
+
+**Expected Result:**
+Появляется ошибка с текстом «Некорректные данные».
+
+**Actual Result:**
+Поле «Телефон» принимает буквы, и данные сохраняются.
+
+**Severity:** Low
+
+**Priority:** Low
+
+---
+
+## BUG-009: В заявке на подбор персонала можно выбрать желаемую дату в прошлом
+
+**Environment:**
+- OS: Windows 11
+- Browser: Google Chrome 157
+- Test Type: Manual Testing
+
+**Preconditions:**
+- Открыта страница сайта https://hr.fnfglobalinc.com/apply.
+
+**Steps to Reproduce:**
+1. Нажать на кнопку «Подбор персонала» в левой колонке.
+2. Нажать на кнопку «Заявка на подбор».
+3. Выбрать дату в прошлом, например 1 ноября.
+4. Нажать кнопку «Отправить HR».
+
+**Expected Result:**
+В списке выбора дат доступны только даты, начиная с сегодняшнего дня.
+
+**Actual Result:**
+Принимаются даты предыдущих дней и месяцев.
+
+**Severity:** Medium
+
+**Priority:** Low
