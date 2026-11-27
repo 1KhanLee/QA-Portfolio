@@ -55,6 +55,10 @@
 - [Чек-листы](Manual-Testing/Checklist.md)
 - [Баг-репорты](Manual-Testing/Bug-Reports.md)
 
+### Тестирование сайта volna.tj
+
+- [Чек-лист, тест-кейсы, API-тест-кейс и баг-репорты по сайту volna.tj](Volna-Testing/README.md)
+
 ### Тестирование API (API Testing)
 
 - [Практика тестирования API в Postman](API-Testing/README.md)
